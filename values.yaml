@@ -2358,11 +2358,12 @@ prometheus:
     ## Tolerations for use with node taints
     ## ref: https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
     ##
-    tolerations: []
-    #  - key: "key"
-    #    operator: "Equal"
-    #    value: "value"
-    #    effect: "NoSchedule"
+    tolerations:
+      - key: "ruletype"
+        operator: "Equal"
+        value: "monitoring"
+        effect: "NoExecute"
+          # effect: "NoSchedule"
 
     ## If specified, the pod's topology spread constraints.
     ## ref: https://kubernetes.io/docs/concepts/workloads/pods/pod-topology-spread-constraints/
