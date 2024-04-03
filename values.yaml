@@ -2393,7 +2393,7 @@ prometheus:
     ## External labels to add to any time series or alerts when communicating with external systems
     ##
     externalLabels:
-      labletest: skbmgke  
+      labeltest: skbmgke  
 
     ## enable --web.enable-remote-write-receiver flag on prometheus-server
     ##
