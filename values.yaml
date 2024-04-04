@@ -1883,6 +1883,9 @@ prometheus:
     annotations: {}
     automountServiceAccountToken: true
 
+  thanosService:
+    enabled: false 
+
   ## Configuration for Prometheus service
   ##
   service:
