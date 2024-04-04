@@ -1885,7 +1885,8 @@ prometheus:
 
   thanosService:
     enabled: false 
-
+  thanosServiceMonitor:
+    enabled: false
   ## Configuration for Prometheus service
   ##
   service:
