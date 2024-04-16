@@ -1107,11 +1107,11 @@ prometheus-node-exporter:
   service:
     portName: http-metrics
       
-  tolerations:
-    - key: "ruletype"
-      operator: "Equal"
-      value: "monitoring"
-      effect: "NoExecute"
+      #  tolerations:
+      #    - key: "ruletype"
+      #      operator: "Equal"
+      #      value: "monitoring"
+      #      effect: "NoExecute"
 
   prometheus:
     monitor:
@@ -2365,11 +2365,11 @@ prometheus:
     ## Tolerations for use with node taints
     ## ref: https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
     ##
-    tolerations:
-      - key: "ruletype"
-        operator: "Equal"
-        value: "monitoring"
-        effect: "NoExecute"
+#    tolerations:
+#      - key: "ruletype"
+#        operator: "Equal"
+#        value: "monitoring"
+#        effect: "NoExecute"
           # effect: "NoSchedule"
 
     ## If specified, the pod's topology spread constraints.
@@ -2430,8 +2430,8 @@ prometheus:
     ## Define which Nodes the Pods are scheduled on.
     ## ref: https://kubernetes.io/docs/user-guide/node-selection/
     ##
-    nodeSelector:
-      labeltest: addnode
+    #    nodeSelector:
+    #      labeltest: addnode
 
     ## Secrets is a list of Secrets in the same namespace as the Prometheus object, which shall be mounted into the Prometheus Pods.
     ## The Secrets are mounted into /etc/prometheus/secrets/. Secrets changes after initial creation of a Prometheus object are not
